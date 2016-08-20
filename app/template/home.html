@@ -1,0 +1,43 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">欢迎使用</h3>
+    </div>
+    <div class="panel-body">
+        <h4>输入视频地址</h4>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="输入b站视频地址" ng-model="url" ng-keyup="enter($event)">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" ng-click="parse()">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 解析
+            </button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="alert alert-info" role="alert">
+    <h4>地址格式(以下均可)</h4>
+    <p>http://www.bilibili.com/video/av5648154</p>
+    <p>av5648154</p>
+    <p>5648154</p>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+               出错！
+            </h4>
+            </div>
+            <div class="modal-body">
+                输入地址有误
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
